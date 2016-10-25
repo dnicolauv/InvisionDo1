@@ -1,0 +1,34 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Application xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="InvisionDo1.App">
+   <Application.Resources>
+       <ResourceDictionary>
+			<Color x:Key="mainColor">#ff3366</Color>	
+			<Color x:Key="appColorTeal">#50D2C2</Color>
+			<Color x:Key="appColorOrange">#FCAB53</Color>
+			<Color x:Key="appColorPurple">#BA77FF</Color>
+			<Color x:Key="appColorLightGray">#F4F4F4</Color>
+
+			<Style TargetType="Label" >
+				<Setter Property="FontFamily" Value="Nunito-Light" />
+				<Setter Property="FontSize" Value="Small" />
+				<Setter Property="TextColor" Value="White" />
+			</Style>
+
+			<Style TargetType="Entry">
+				<Setter Property="FontFamily" Value="Nunito-Light" />
+				<Setter Property="FontSize" Value="Small" />
+				<Setter Property="TextColor" Value="White" />
+				<Setter Property="PlaceholderColor" Value="White"/> 
+				<Setter Property="BackgroundColor" Value="Transparent"/> 
+			</Style>
+
+			<Style TargetType="Button">
+				<Setter Property="BorderRadius" Value="0"/>
+				<Setter Property="HeightRequest" Value="55"/>
+				<Setter Property="BackgroundColor" Value="{DynamicResource mainColor}"/>
+				<Setter Property="TextColor" Value="White"/>
+				<Setter Property="FontSize" Value="Small" />
+			</Style>
+		</ResourceDictionary>
+	</Application.Resources>
+</Application>

@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:eff="clr-namespace:InvisionDo1.Effects;assembly=InvisionDo1" 
+		xmlns:local="clr-namespace:InvisionDo1;assembly=InvisionDo1" 
+		x:Class="InvisionDo1.MonthPage">
+	<ContentPage.Content>
+		<AbsoluteLayout>
+
+				<Image Source="MonthBg.png" Aspect="Fill" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 0.30" />
+			
+				<Grid AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0.03, 1, 0.30">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="2*"/> <!--BAR-->
+						<RowDefinition Height="2.5*"/> <!--TITLE-->
+						<RowDefinition Height="2.5*"/> <!--AVATAR-->
+						<RowDefinition Height="2*"/> <!--VOID-->
+					</Grid.RowDefinitions>
+								
+						<StackLayout Grid.Row="0" Orientation="Horizontal" VerticalOptions="EndAndExpand" 
+							HorizontalOptions="FillAndExpand">
+							<Image Scale="0.5" Source="Menu.png" HorizontalOptions="StartAndExpand"/>
+							<Image Scale="0.5" Source="Search.png" HorizontalOptions="EndAndExpand"/>
+						</StackLayout>
+
+						<StackLayout Orientation="Horizontal" VerticalOptions="EndAndExpand" Grid.Row="1" Margin="15,0,0,0">
+							<Label Text="February" FontSize="32" />
+							<Label Text="2015" Opacity="0.7" FontSize="32" Margin="10,0,0,0" />
+						</StackLayout>
+
+						<StackLayout Orientation="Horizontal" VerticalOptions="StartAndExpand" Grid.Row="3" Margin="15,0,0,10">
+							<Label Text="DAY" FontSize="Medium" />
+							<Label Text="WEEK" FontSize="Medium" Margin="20,0,0,0" />
+							<Label Text="MONTH" FontSize="Medium" Margin="20,0,0,0" />
+						</StackLayout>
+
+				</Grid>
+									
+				<StackLayout AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 1, 1, 0.78"  >
+
+					<local:CalendarView HorizontalOptions="Fill"
+							PrevMonthImageSource="ChevronLeft.png" NextMonthImageSource="ChevronRight.png" 
+							PrevMonthImageScale="0.5" NextMonthImageScale="0.5" WeekDayColor="Gray"
+							CurrentDateHilight="CircularBackground" CurrentDateHilightBackgroundColor="{DynamicResource appColorLightGray}" OtherMonthDayColor="Gray"
+							EventDayMarker="Dot" EventDayMarkerColor="{DynamicResource mainColor}" CalendarMode="Month" CalendarRowHeight="40"
+							MonthNameTextColor="White" Browsable="False" >
+					</local:CalendarView>
+
+					<BoxView HeightRequest="0.5" Color="{DynamicResource appColorLightGray}" VerticalOptions="End" Margin="10,0,10,0" TranslationY="2"/>
+					<ListView x:Name="agendaListView" VerticalOptions="FillAndExpand" RowHeight="70" SeparatorVisibility="Default"
+						SeparatorColor="{DynamicResource appColorLightGray}">
+						<ListView.ItemTemplate>
+			                <DataTemplate>
+			                    <ViewCell>	     
+									<ContentView>										
+										<StackLayout Orientation="Horizontal">
+											<BoxView BackgroundColor="{Binding MarkerColor}"
+												HorizontalOptions="Start" VerticalOptions="Fill" WidthRequest="3"/>
+
+											<Image Source="{Binding Avatar}" Scale="0.6" Margin="5,0,0,0"
+													VerticalOptions="Center" HorizontalOptions="Start">
+												<Image.Effects><eff:CircleEffect/></Image.Effects>
+											</Image>
+
+											<StackLayout Margin="10,0,0,0" Orientation="Vertical" HorizontalOptions="Start" VerticalOptions="Center">
+												<StackLayout Orientation="Horizontal" VerticalOptions="Start" >
+													<Label Text="{Binding Title}" FontSize="14" TextColor="Black" />
+													<Label Text="{Binding FriendName}" FontSize="14" FontAttributes="Bold" TextColor="{DynamicResource mainColor}" />
+												</StackLayout>
+												<StackLayout Orientation="Horizontal" VerticalOptions="End" >
+													<Label Text="{Binding Subtitle}" TextColor="Gray" FontSize="12" />
+													<Label Text="{Binding Location}" TextColor="Gray" FontSize="12" Margin="10,0,0,0" />
+												</StackLayout>
+								                
+											</StackLayout>
+										</StackLayout>
+									</ContentView>
+			                    </ViewCell>
+			                </DataTemplate>
+			            </ListView.ItemTemplate>
+					</ListView>
+				</StackLayout>		
+
+				<Image x:Name="favButton" Source="PlusButton.png" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.95, 1.01, 0.13, 0.13">
+					<Image.Effects><eff:ShadowEffect ShadowSize="1.5" ShadowColor="Gray" /></Image.Effects>
+				</Image>
+			
+		</AbsoluteLayout>
+	</ContentPage.Content>
+</ContentPage>

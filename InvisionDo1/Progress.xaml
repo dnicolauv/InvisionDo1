@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:eff="clr-namespace:InvisionDo1.Effects;assembly=InvisionDo1" 
+		xmlns:local="clr-namespace:InvisionDo1;assembly=InvisionDo1" 
+		x:Class="InvisionDo1.Progress">
+	<ContentPage.Content>
+		<AbsoluteLayout>
+
+				<Image Source="ProgressBg.png" Aspect="Fill" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0, 1, 0.70" />
+			
+				<Grid AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 0.03, 1, 0.70">
+					<Grid.RowDefinitions>
+						<RowDefinition Height="1*"/> <!--BAR-->
+						<RowDefinition Height="1*"/> <!--TITLE-->
+						<RowDefinition Height="1*"/> <!--SUBTITLE-->
+						<RowDefinition Height="4*"/> <!--AVATAR-->
+						<RowDefinition Height="1.5*"/> <!--PROMPT-->
+						<RowDefinition Height="0.5*"/> <!--VOID-->
+					</Grid.RowDefinitions>
+								
+					<StackLayout Grid.Row="0" Orientation="Horizontal" VerticalOptions="EndAndExpand" 
+							HorizontalOptions="FillAndExpand">
+							<Image Scale="0.5" Source="Menu.png" HorizontalOptions="StartAndExpand"/>
+							<Image Scale="0.5" Source="Avatar.png" HorizontalOptions="EndAndExpand">
+								<Image.Effects><eff:CircleEffect/></Image.Effects>
+							</Image>
+						</StackLayout>
+
+						<StackLayout Margin="10,0,10,0" Orientation="Horizontal" HorizontalOptions="FillAndExpand" 
+																		VerticalOptions="EndAndExpand" Grid.Row="1">
+							<Image Scale="0.3" Source="ChevronLeft.png" HorizontalOptions="StartAndExpand"/>
+							<Label Text="February" FontSize="32" HorizontalOptions="CenterAndExpand"/>
+							<Image Scale="0.3" Source="ChevronRight.png" HorizontalOptions="EndAndExpand"/>
+						</StackLayout> 
+						<Label Text="2016" HorizontalOptions="Center" Grid.Row="2" VerticalOptions="Start" FontSize="10" Opacity="0.8" />
+
+						<StackLayout Grid.Row="3" Spacing="60" Orientation="Horizontal" HorizontalOptions="CenterAndExpand" VerticalOptions="CenterAndExpand" >
+
+							<local:ProgressView IndicatorColor="{DynamicResource appColorOrange}" StrokeColor="Gray" TranslationY="10"
+									StrokeWidth="2" Percentage="18" Scale="0.7" VerticalOptions="CenterAndExpand" />
+
+							<local:ProgressView IndicatorColor="{DynamicResource appColorTeal}" StrokeColor="Gray" TranslationY="-20"
+									StrokeWidth="2" Percentage="54" Scale="1.5" VerticalOptions="CenterAndExpand" />
+
+							<local:ProgressView IndicatorColor="{DynamicResource appColorPurple}" StrokeColor="Gray" TranslationY="10"
+									StrokeWidth="2" Percentage="28" Scale="0.7" VerticalOptions="CenterAndExpand" />						
+		
+						</StackLayout>
+
+						<Label Text="Good job, you've completed 6% more tasks this month." Grid.Row="4" HorizontalTextAlignment="Center"
+							Margin="60,0,60,0" />
+					</Grid>
+
+								
+				<StackLayout BackgroundColor="Blue" AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0, 1, 1, 0.27"  >
+
+					<ListView x:Name="taskCategoryStatusListView" VerticalOptions="FillAndExpand" 
+						RowHeight="60" SeparatorVisibility="Default" SeparatorColor="{DynamicResource appColorLightGray}">
+						<ListView.ItemTemplate>
+			                <DataTemplate>
+			                    <ViewCell>	                   
+									<ContentView>
+										<StackLayout Orientation="Horizontal" Padding="15">
+											<BoxView VerticalOptions="Center" HorizontalOptions="Start" WidthRequest="10" HeightRequest="10"
+												BackgroundColor="{Binding CategoryColor}" Margin="5,0,0,0" />
+											<Label Text="{Binding CategoryName}" Margin="5,0,0,0" FontSize="Small" TextColor="Black" HorizontalOptions="Start" VerticalOptions="Center" />
+											<Label Text="{Binding CategoryCount}" Margin="0,0,5,0" FontSize="Small" TextColor="Black" HorizontalOptions="EndAndExpand" VerticalOptions="Center" />
+										</StackLayout>
+									</ContentView>
+			                    </ViewCell>
+			                </DataTemplate>
+			            </ListView.ItemTemplate>
+					</ListView>
+									
+				</StackLayout>		
+
+				<Image x:Name="chartButton" Source="chartIcon.png" AbsoluteLayout.LayoutFlags="All" 
+					AbsoluteLayout.LayoutBounds="0.5, 0.73, 0.13, 0.13">
+					<Image.Effects><eff:ShadowEffect ShadowSize="1" ShadowColor="Gray" /></Image.Effects>
+				</Image>
+		</AbsoluteLayout>
+	</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+		xmlns:local="clr-namespace:InvisionDo1;assembly=InvisionDo1" 
+		xmlns:eff="clr-namespace:InvisionDo1.Effects;assembly=InvisionDo1" 
+		x:Class="InvisionDo1.MyPage" BackgroundColor="#F1F1F1" Padding="0" >
+	<ContentPage.Content>
+		<StackLayout Padding="20" >
+			
+				<local:ShapeView x:Name="shape" Padding="5" BackgroundColor="Transparent" ShapeType="AnimatedCircularIndicator"
+								StrokeColor="Gray" IndicatorColor="#E94C56" IndicatorPercentage="82" StrokeWidth="5"
+								WidthRequest="50" HeightRequest="50"/>
+			</StackLayout>
+	</ContentPage.Content>
+</ContentPage>

@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="InvisionDo1.SignIn"
+		xmlns:eff="clr-namespace:InvisionDo1.Effects;assembly=InvisionDo1"
+		Padding="0,0,0,0" >
+	<ContentPage.Content>
+
+		<AbsoluteLayout>
+			
+			<ContentView  AbsoluteLayout.LayoutBounds="0, 0, 1, 1" AbsoluteLayout.LayoutFlags="All">
+				<Image Source="SignIn_Background.png" Aspect="AspectFill" />
+			</ContentView>		
+
+			<Image Source="Back.png" AbsoluteLayout.LayoutBounds="0.05, 0, 0.05, 0.15" AbsoluteLayout.LayoutFlags="All"/>
+
+			<ContentView Padding="15" AbsoluteLayout.LayoutBounds="0.1, 0.25, 1, 0.5" AbsoluteLayout.LayoutFlags="All">
+				<Label HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" 
+					Text="Sign Up" FontSize="31" />
+			</ContentView>
+
+
+				<StackLayout Orientation="Vertical" AbsoluteLayout.LayoutBounds="0, 1, 1, 0.73" AbsoluteLayout.LayoutFlags="All">
+					<StackLayout Orientation="Horizontal" Padding="25, 20, 0, 5" Spacing="25">
+						<Image Source="Username.png" HeightRequest="20" VerticalOptions="Start" ></Image>
+						<Entry Placeholder="Name" 
+							 PlaceholderColor="White" Margin="0,3,0,0"  >
+								<Entry.Effects><eff:EntryEffect /></Entry.Effects>
+							</Entry>
+						
+					</StackLayout>
+					<BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
+
+					<StackLayout Orientation="Horizontal" Padding="25, 20, 0, 5"  Spacing="25">
+						<Image Source="Email.png" HeightRequest="20" WidthRequest="20" ></Image>
+						<Entry Placeholder="Email" Margin="0,3,0,0" >
+								<Entry.Effects><eff:EntryEffect /></Entry.Effects>
+							</Entry>
+					</StackLayout>
+					<BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" />
+
+					<StackLayout Orientation="Horizontal" Padding="25, 20, 0, 5"  Spacing="25">
+						<Image Source="Password.png" HeightRequest="20" ></Image>
+						<Entry IsPassword="true" Placeholder="Password" Margin="0,3,0,0" >
+								<Entry.Effects><eff:EntryEffect /></Entry.Effects>
+							</Entry>
+					</StackLayout>
+					<BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" />
+
+					<StackLayout Orientation="Horizontal" Padding="25, 20, 0, 5"  Spacing="25">
+						<Image Source="Birthday.png" HeightRequest="20" ></Image>
+						<Entry Placeholder="Birthday" Margin="0,3,0,0" >
+								<Entry.Effects><eff:EntryEffect /></Entry.Effects>
+							</Entry>
+					</StackLayout>
+					<BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" />
+									
+				</StackLayout>
+
+				<StackLayout Orientation="Vertical" AbsoluteLayout.LayoutBounds="0, 1, 1, 0.17" AbsoluteLayout.LayoutFlags="All">
+					<Button Clicked="Join_Clicked" Text="Join" />
+					<StackLayout Margin="0,10,0,0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+						<Label FontSize="Small" TextColor="Silver" Text="Already have an account?"/> <Label x:Name="signinButton" FontSize="Small" TextColor="White" Text="Sign In"/>		
+					</StackLayout>
+				</StackLayout>
+					
+
+		</AbsoluteLayout>
+	</ContentPage.Content>
+</ContentPage>

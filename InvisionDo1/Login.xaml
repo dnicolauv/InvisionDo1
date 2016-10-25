@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="InvisionDo1.Login"		
+		xmlns:eff="clr-namespace:InvisionDo1.Effects;assembly=InvisionDo1" 
+		Padding="0,0,0,0" >	
+	 <ContentPage.Content>
+
+		<AbsoluteLayout>			
+			<ContentView  AbsoluteLayout.LayoutBounds="0, 1, 1, 1" AbsoluteLayout.LayoutFlags="All">
+				<Image Source="Login_Background.jpg" Aspect="Fill" />
+			</ContentView>
+			
+			<ContentView AbsoluteLayout.LayoutBounds="0.5, 0.15, 0.2, 0.2" AbsoluteLayout.LayoutFlags="All">
+				<AbsoluteLayout>
+					<BoxView AbsoluteLayout.LayoutBounds="0.5, 0.5, 1.7, 1" AbsoluteLayout.LayoutFlags="All" 
+						 HorizontalOptions="FillAndExpand" Color="White" >
+						<BoxView.Effects><eff:CircleEffect /></BoxView.Effects>
+					</BoxView>
+					<Image AbsoluteLayout.LayoutBounds="0.5, 0.5, 1, 1" AbsoluteLayout.LayoutFlags="All" Source="Logo.png" />
+				</AbsoluteLayout>
+			</ContentView>
+			
+			<Grid AbsoluteLayout.LayoutBounds="0, 1, 1, 0.55" AbsoluteLayout.LayoutFlags="All">
+				<Grid.RowDefinitions>
+			      <RowDefinition Height="5*" /> 
+			      <RowDefinition Height="3*" /> 
+			    </Grid.RowDefinitions>
+
+				<Grid.ColumnDefinitions>
+					<ColumnDefinition Width="1*"/>
+				</Grid.ColumnDefinitions>
+
+
+				<StackLayout Orientation="Vertical" Grid.Row="0" Grid.Column="0">
+					<StackLayout Orientation="Horizontal" Padding="25, 20, 0, 5" Spacing="25">
+						<Image Source="Username.png" HeightRequest="20" VerticalOptions="Start" ></Image>
+						<Entry Placeholder="Username" PlaceholderColor="White" Margin="0,3,0,0"  >								
+							    <Entry.Effects><eff:EntryEffect /></Entry.Effects>							    
+						</Entry>
+						
+					</StackLayout>
+					<BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand" VerticalOptions="Start" />
+
+					<StackLayout Orientation="Horizontal" Padding="25, 20, 0, 5"  Spacing="25">
+						<Image Source="Password.png" HeightRequest="20" ></Image>
+						<Entry IsPassword="true" Placeholder="Password" Margin="0,3,0,0" >
+								<Entry.Effects><eff:EntryEffect /></Entry.Effects>
+							</Entry>
+					</StackLayout>
+					<BoxView Color="Gray" HeightRequest="1" HorizontalOptions="FillAndExpand"/>
+
+					<Label FontSize="Small" FontFamily="Nunito-Light" Text="Forgot Password" Margin="10" TextColor="Silver" HorizontalOptions="EndAndExpand" ></Label>
+
+				</StackLayout>
+
+				<StackLayout Orientation="Vertical" Grid.Row="1" Grid.Column="0">
+					<Button Clicked="SignIn_Clicked" Text="Sign In" />
+					<StackLayout Margin="0,10,0,0" Orientation="Horizontal" HorizontalOptions="CenterAndExpand">
+						<Label FontSize="Small" TextColor="Silver" Text="Don't have an account?"/> <Label FontSize="Small" TextColor="White" Text="Sign Up"/>					
+					</StackLayout> 
+				</StackLayout>
+				
+			</Grid>						
+
+		</AbsoluteLayout>
+	</ContentPage.Content>
+</ContentPage>

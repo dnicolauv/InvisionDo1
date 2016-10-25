@@ -1,0 +1,12 @@
+*.suo
+*.user
+_ReSharper.*
+bin/
+obj/
+packages/
+Droid/bin/
+Droid/obj/
+iOS/bin/
+iOS/obj/
+InvisionDo1/bin/
+InvisionDo1/obj/

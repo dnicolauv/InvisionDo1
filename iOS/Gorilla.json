@@ -1,0 +1,24 @@
+{
+	"knownAssemblies":[
+		{
+			"name": "InvisionDo1",
+			"types": null
+		},
+		{
+			"name": "InvisionDo1.Effects",
+			"types": null
+		},
+		{
+			"name": "Xamarin.Forms.Themes",
+			"types": null
+		},
+		{
+			"name": "Xamarin.Forms.Theme.Base",
+			"types": null
+		},
+		{
+			"name": "Xamarin.Forms.Theme.Light",
+			"types": null
+		},
+	]
+}
