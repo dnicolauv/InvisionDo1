@@ -21,12 +21,6 @@ namespace InvisionDo1.Droid
 			base.OnCreate(bundle);
 
 			global::Xamarin.Forms.Forms.Init(this, bundle);
-
-			#if GORILLA
-				LoadApplication(UXDivers.Gorilla.Droid.Player.CreateApplication(ApplicationContext, new UXDivers.Gorilla.Config("Good gorilla")));
-			#else
-				LoadApplication(new App());
-			#endif
 		}
 	}
 }

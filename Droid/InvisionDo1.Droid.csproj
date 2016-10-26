@@ -119,18 +119,6 @@
     <Reference Include="SocketIoClientDotNet">
       <HintPath>..\packages\SocketIoClientDotNet.0.9.13\lib\monoandroid10\SocketIoClientDotNet.dll</HintPath>
     </Reference>
-    <Reference Include="UXDivers.Gorilla.SDK">
-      <HintPath>..\packages\UXDivers.GorillaPlayer.SDK.0.9.1.2\lib\MonoAndroid10\UXDivers.Gorilla.SDK.dll</HintPath>
-    </Reference>
-    <Reference Include="UXDivers.Gorilla.SDK.Droid">
-      <HintPath>..\packages\UXDivers.GorillaPlayer.SDK.0.9.1.2\lib\MonoAndroid10\UXDivers.Gorilla.SDK.Droid.dll</HintPath>
-    </Reference>
-    <Reference Include="UXDivers.Gorilla.Common">
-      <HintPath>..\packages\UXDivers.GorillaPlayer.Common.0.9.1.2\lib\MonoAndroid10\UXDivers.Gorilla.Common.dll</HintPath>
-    </Reference>
-    <Reference Include="UXDivers.Gorilla.Common.Droid">
-      <HintPath>..\packages\UXDivers.GorillaPlayer.Common.0.9.1.2\lib\MonoAndroid10\UXDivers.Gorilla.Common.Droid.dll</HintPath>
-    </Reference>
     <Reference Include="FormsViewGroup">
       <HintPath>..\packages\Xamarin.Forms.2.3.0.46-pre3\lib\MonoAndroid10\FormsViewGroup.dll</HintPath>
     </Reference>

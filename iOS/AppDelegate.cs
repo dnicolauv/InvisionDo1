@@ -14,12 +14,6 @@ namespace InvisionDo1.iOS
 		{
 			global::Xamarin.Forms.Forms.Init();
 
-			#if GORILLA
-				LoadApplication(UXDivers.Gorilla.iOS.Player.CreateApplication(new UXDivers.Gorilla.Config("Good gorilla")));
-			#else
-				LoadApplication(new App());
-			#endif
-
 			return base.FinishedLaunching(app, options);
 		}
 	}

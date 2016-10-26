@@ -1,17 +1,17 @@
 ﻿<Properties StartupConfiguration="{987FE936-9B57-405E-84EB-B611A6F9FF61}|Default">
   <MonoDevelop.Ide.Workbench ActiveDocument="InvisionDo1 Status">
     <Files>
-      <File FileName="iOS/Shape/ShapeRenderer.cs" Line="94" Column="4" />
-      <File FileName="InvisionDo1/Shape/ShapeView.cs" Line="88" Column="28" />
-      <File FileName="iOS/Effects/Effects.cs" Line="13" Column="63" />
-      <File FileName="InvisionDo1/Effects/Effects.cs" Line="17" Column="4" />
       <File FileName="InvisionDo1/App.xaml.cs" Line="16" Column="6" />
+      <File FileName="Droid/MainActivity.cs" Line="23" Column="51" />
+      <File FileName="iOS/AppDelegate.cs" Line="15" Column="39" />
       <File FileName="InvisionDo1 Status" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="InvisionDo1" expanded="True" selected="True" />
+          <Node name="InvisionDo1" expanded="True" selected="True">
+            <Node name="InvisionDo1.iOS" expanded="True" />
+          </Node>
         </State>
       </Pad>
     </Pads>
@@ -25,7 +25,6 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <DisabledProjects>
-    <String>Droid/InvisionDo1.Droid.csproj</String>
     <String>../dnvXamarinForms/dnvXamarinForms/dnvXamarinForms.Droid/dnvXamarinForms.Droid.csproj</String>
   </DisabledProjects>
 </Properties>

@@ -59,31 +59,20 @@
     <Compile Include="Login.xaml.cs">
       <DependentUpon>Login.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Effects\Effects.cs" />
     <Compile Include="Walkthrough.xaml.cs">
       <DependentUpon>Walkthrough.xaml</DependentUpon>
     </Compile>
     <Compile Include="SignIn.xaml.cs">
       <DependentUpon>SignIn.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Shape\ShapeView.cs" />
     <Compile Include="WeekPage.xaml.cs">
       <DependentUpon>WeekPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="MyPage.xaml.cs">
       <DependentUpon>MyPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="CalendarView\CalendarViewDay.xaml.cs">
-      <DependentUpon>CalendarViewDay.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="CalendarView\CalendarView.xaml.cs">
-      <DependentUpon>CalendarView.xaml</DependentUpon>
-    </Compile>
     <Compile Include="Progress.xaml.cs">
       <DependentUpon>Progress.xaml</DependentUpon>
-    </Compile>
-    <Compile Include="ProgressView\ProgressView.xaml.cs">
-      <DependentUpon>ProgressView.xaml</DependentUpon>
     </Compile>
     <Compile Include="MonthPage.xaml.cs">
       <DependentUpon>MonthPage.xaml</DependentUpon>
@@ -140,16 +129,7 @@
     <EmbeddedResource Include="MyPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
-    <EmbeddedResource Include="CalendarView\CalendarViewDay.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="CalendarView\CalendarView.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
     <EmbeddedResource Include="Progress.xaml">
-      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
-    </EmbeddedResource>
-    <EmbeddedResource Include="ProgressView\ProgressView.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
     <EmbeddedResource Include="MonthPage.xaml">
@@ -161,6 +141,12 @@
     <Folder Include="Shape\" />
     <Folder Include="CalendarView\" />
     <Folder Include="ProgressView\" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\dnvXamarinForms\dnvXamarinForms\dnvXamarinForms\dnvXamarinForms.csproj">
+      <Project>{F41C12F5-C672-4B55-BA32-FCC2399F8996}</Project>
+      <Name>dnvXamarinForms</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.0.49\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.0.49\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />
