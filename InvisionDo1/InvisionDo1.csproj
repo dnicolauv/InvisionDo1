@@ -77,16 +77,21 @@
     <Compile Include="MonthPage.xaml.cs">
       <DependentUpon>MonthPage.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Effects.cs" />
+    <Compile Include="CalendarView\CalendarView.xaml.cs">
+      <DependentUpon>..\..\..\dnvXamarinForms\dnvXamarinForms\dnvXamarinForms\CalendarView\CalendarView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="CalendarView\CalendarViewDay.xaml.cs">
+      <DependentUpon>..\..\..\dnvXamarinForms\dnvXamarinForms\dnvXamarinForms\CalendarView\CalendarViewDay.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="ProgressView\ProgressView.xaml.cs">
+      <DependentUpon>..\..\..\dnvXamarinForms\dnvXamarinForms\dnvXamarinForms\ProgressView\ProgressView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Shape\ShapeView.cs" />
   </ItemGroup>
   <ItemGroup>
     <Reference Include="ModernHttpClient">
       <HintPath>..\packages\modernhttpclient.2.4.2\lib\Portable-Net45+WinRT45+WP8+WPA81\ModernHttpClient.dll</HintPath>
-    </Reference>
-    <Reference Include="UXDivers.Gorilla.SDK">
-      <HintPath>..\packages\UXDivers.GorillaPlayer.SDK.0.9.1.2\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\UXDivers.Gorilla.SDK.dll</HintPath>
-    </Reference>
-    <Reference Include="UXDivers.Gorilla.Common">
-      <HintPath>..\packages\UXDivers.GorillaPlayer.Common.0.9.1.2\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\UXDivers.Gorilla.Common.dll</HintPath>
     </Reference>
     <Reference Include="Xamarin.Forms.CarouselView">
       <HintPath>..\packages\Xamarin.Forms.CarouselView.2.3.0-pre2\lib\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.CarouselView.dll</HintPath>
@@ -135,18 +140,23 @@
     <EmbeddedResource Include="MonthPage.xaml">
       <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
     </EmbeddedResource>
+    <EmbeddedResource Include="CalendarView\CalendarView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="CalendarView\CalendarViewDay.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
+    <EmbeddedResource Include="ProgressView\ProgressView.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+      <SubType>Designer</SubType>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Effects\" />
-    <Folder Include="Shape\" />
     <Folder Include="CalendarView\" />
     <Folder Include="ProgressView\" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\..\dnvXamarinForms\dnvXamarinForms\dnvXamarinForms\dnvXamarinForms.csproj">
-      <Project>{F41C12F5-C672-4B55-BA32-FCC2399F8996}</Project>
-      <Name>dnvXamarinForms</Name>
-    </ProjectReference>
+    <Folder Include="Shape\" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath32)\Microsoft\Portable\$(TargetFrameworkVersion)\Microsoft.Portable.CSharp.targets" />
   <Import Project="..\packages\Xamarin.Forms.2.3.0.49\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets" Condition="Exists('..\packages\Xamarin.Forms.2.3.0.49\build\portable-win+net45+wp80+win81+wpa81+MonoAndroid10+MonoTouch10+Xamarin.iOS10\Xamarin.Forms.targets')" />

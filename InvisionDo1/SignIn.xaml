@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" x:Class="InvisionDo1.SignIn"
-		xmlns:eff="clr-namespace:dnvXamarinForms.Effects;assembly=dnvXamarinForms"
+		xmlns:eff="clr-namespace:InvisionDo1.Effects;assembly=InvisionDo1"
 		Padding="0,0,0,0" >
 	<ContentPage.Content>
 

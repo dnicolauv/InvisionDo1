@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ContentView xmlns="http://xamarin.com/schemas/2014/forms" xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml" 
+			x:Class="InvisionDo1.CalendarViewDay"
+			xmlns:local="clr-namespace:InvisionDo1;assembly=InvisionDo1"
+			xmlns:eff="clr-namespace:InvisionDo1.Effects;assembly=InvisionDo1" 
+			IsVisible="{Binding IsVisible}">
+
+	<ContentView.Resources>
+	  <ResourceDictionary>
+		  <local:DayNameValueConverter x:Key="dayNameValueConverter" />
+	  </ResourceDictionary>
+	</ContentView.Resources>
+
+	<ContentView.Content>
+		<Grid HorizontalOptions="FillAndExpand" VerticalOptions="FillAndExpand" Margin="0">
+
+			<Grid.RowDefinitions>
+				<RowDefinition Height="*" />
+			</Grid.RowDefinitions>
+			
+			<BoxView Grid.Row="0" x:Name="background" VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand" 
+					BackgroundColor="{Binding CalculatedBackgroundColor}">
+				<BoxView.Effects><eff:CircleEffect/></BoxView.Effects>
+			</BoxView>
+			<Label Grid.Row="0" x:Name="label" HorizontalOptions="Center" VerticalOptions="Center" 
+				Text="{Binding Day, Converter={StaticResource dayNameValueConverter}"
+				TextColor="{Binding CaculatedTextColor}"
+				FontAttributes="{Binding CalculatedFontAttributes}"></Label>
+			<BoxView Margin="3,3,3,6" Grid.Row="0" x:Name="indicator" IsVisible="{Binding HasEvents}" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand"
+					BackgroundColor="{Binding CalculatedIndicatorColor}" WidthRequest="4" HeightRequest="4" >
+				<BoxView.Effects><eff:CircleEffect/></BoxView.Effects>
+			</BoxView>
+		</Grid>
+		<!--
+		<AbsoluteLayout VerticalOptions="CenterAndExpand" HorizontalOptions="CenterAndExpand">
+			<BoxView x:Name="background" VerticalOptions="Center" HorizontalOptions="Center" BackgroundColor="{Binding CalculatedBackgroundColor}" 
+					AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0,0,1,1">
+				<BoxView.Effects><eff:CircleEffect/></BoxView.Effects>
+			</BoxView>
+			<Label x:Name="label" HorizontalOptions="Center" VerticalOptions="Center" 
+				Text="{Binding Day, Converter={StaticResource dayNameValueConverter}"
+				TextColor="{Binding CaculatedTextColor}"
+				FontAttributes="{Binding CalculatedFontAttributes}"
+				AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.5,0.5,1,1"></Label>
+			<BoxView x:Name="indicator" IsVisible="{Binding HasEvents}" VerticalOptions="EndAndExpand" HorizontalOptions="CenterAndExpand"
+					BackgroundColor="{Binding CalculatedIndicatorColor}"
+					AbsoluteLayout.LayoutFlags="All" AbsoluteLayout.LayoutBounds="0.55,0.90,0.10,0.10">
+				<BoxView.Effects><eff:CircleEffect/></BoxView.Effects>
+			</BoxView>
+		</AbsoluteLayout>
+		-->
+	</ContentView.Content>
+</ContentView>

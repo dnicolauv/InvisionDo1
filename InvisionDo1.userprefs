@@ -1,15 +1,38 @@
 ﻿<Properties StartupConfiguration="{987FE936-9B57-405E-84EB-B611A6F9FF61}|Default">
-  <MonoDevelop.Ide.Workbench ActiveDocument="InvisionDo1 Status">
+  <MonoDevelop.Ide.Workbench ActiveDocument="iOS/Shape/ShapeRenderer.cs">
     <Files>
-      <File FileName="iOS/AppDelegate.cs" Line="16" Column="33" />
-      <File FileName="Droid/MainActivity.cs" Line="22" Column="4" />
-      <File FileName="InvisionDo1/App.xaml.cs" Line="16" Column="6" />
-      <File FileName="InvisionDo1 Status" />
+      <File FileName="InvisionDo1/obj/Debug/InvisionDo1.Login.xaml.g.cs" Line="1" Column="1" />
+      <File FileName="../dnvXamarinForms/dnvXamarinForms/dnvXamarinForms.iOS/Effects/Effects.cs" Line="62" Column="22" />
+      <File FileName="InvisionDo1/Login.xaml.cs" Line="2" Column="34" />
+      <File FileName="InvisionDo1/Effects.cs" Line="39" Column="3" />
+      <File FileName="iOS/Effects.cs" Line="203" Column="112" />
+      <File FileName="../dnvXamarinForms/dnvXamarinForms/dnvXamarinForms/Effects/Effects.cs" Line="4" Column="26" />
+      <File FileName="../dnvXamarinForms/dnvXamarinForms/dnvXamarinForms/Shape/ShapeView.cs" Line="15" Column="3" />
+      <File FileName="iOS/Main.cs" Line="17" Column="1" />
+      <File FileName="InvisionDo1/obj/Debug/InvisionDo1.MyPage.xaml.g.cs" Line="20" Column="37" />
+      <File FileName="InvisionDo1/Shape/ShapeView.cs" Line="8" Column="22" />
+      <File FileName="InvisionDo1/ProgressView/ProgressView.xaml.cs" Line="6" Column="22" />
+      <File FileName="InvisionDo1/CalendarView/CalendarView.xaml.cs" Line="9" Column="22" />
+      <File FileName="InvisionDo1/CalendarView/CalendarViewDay.xaml.cs" Line="10" Column="22" />
+      <File FileName="iOS/Shape/ShapeRenderer.cs" Line="10" Column="76" />
     </Files>
     <Pads>
       <Pad Id="ProjectPad">
         <State name="__root__">
-          <Node name="InvisionDo1" expanded="True" selected="True" />
+          <Node name="InvisionDo1" expanded="True">
+            <Node name="InvisionDo1" expanded="True">
+              <Node name="CalendarView" expanded="True">
+                <Node name="CalendarView.xaml" expanded="True" />
+                <Node name="CalendarViewDay.xaml" expanded="True" />
+              </Node>
+              <Node name="ProgressView" expanded="True" />
+            </Node>
+            <Node name="InvisionDo1.iOS" expanded="True">
+              <Node name="Shape" expanded="True">
+                <Node name="ShapeRenderer.cs" selected="True" />
+              </Node>
+            </Node>
+          </Node>
         </State>
       </Pad>
     </Pads>
@@ -23,6 +46,8 @@
   </MonoDevelop.Ide.DebuggingService.Breakpoints>
   <MonoDevelop.Ide.DebuggingService.PinnedWatches />
   <DisabledProjects>
+    <String>../dnvXamarinForms/dnvXamarinForms/dnvXamarinForms/dnvXamarinForms.csproj</String>
     <String>../dnvXamarinForms/dnvXamarinForms/dnvXamarinForms.Droid/dnvXamarinForms.Droid.csproj</String>
+    <String>../dnvXamarinForms/dnvXamarinForms/dnvXamarinForms.iOS/dnvXamarinForms.iOS.csproj</String>
   </DisabledProjects>
 </Properties>

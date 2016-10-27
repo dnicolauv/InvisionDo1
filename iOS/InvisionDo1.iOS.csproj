@@ -172,10 +172,6 @@
       <Project>{84ACB044-9887-42F4-AF1D-CCDA33912E88}</Project>
       <Name>InvisionDo1</Name>
     </ProjectReference>
-    <ProjectReference Include="..\..\dnvXamarinForms\dnvXamarinForms\dnvXamarinForms.iOS\dnvXamarinForms.iOS.csproj">
-      <Project>{ECD4FDE9-D072-44ED-B3D3-68774758BA34}</Project>
-      <Name>dnvXamarinForms.iOS</Name>
-    </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <ImageAsset Include="Assets.xcassets\AppIcons.appiconset\Contents.json" />
@@ -184,7 +180,6 @@
   <ItemGroup>
     <Folder Include="Resources\" />
     <Folder Include="Resources\Fonts\" />
-    <Folder Include="Effects\" />
     <Folder Include="Shape\" />
   </ItemGroup>
   <ItemGroup>
@@ -198,6 +193,8 @@
   <ItemGroup>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Effects.cs" />
+    <Compile Include="Shape\ShapeRenderer.cs" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Fonts\Nunito-Bold.ttf" />

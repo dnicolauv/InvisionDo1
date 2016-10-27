@@ -1,6 +1,5 @@
 ﻿using System;
 using System.Collections.Generic;
-
 using Xamarin.Forms;
 
 namespace InvisionDo1
@@ -10,9 +9,9 @@ namespace InvisionDo1
 		public Login()
 		{
 			InitializeComponent();
-
 			NavigationPage.SetHasNavigationBar(this, false);
 		}
+
 
 		async void SignIn_Clicked(object sender, System.EventArgs e)
 		{
