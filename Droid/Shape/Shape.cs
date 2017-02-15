@@ -14,7 +14,7 @@ namespace dnvXamarinForms.Droid
     {
         private readonly float QuarterTurnCounterClockwise = -90;
 
-        public ShapeView ShapeView { get; set; }
+        public InvisionDo1.ShapeView ShapeView { get; set; }
 
         // Pixel density
         private readonly float density;
@@ -59,7 +59,7 @@ namespace dnvXamarinForms.Droid
 
             switch (ShapeView.ShapeType)
             {
-                case ShapeType.Box:
+                case InvisionDo1.ShapeType.Box:
                     HandleStandardDraw(canvas, p => {
                         var rect = new RectF(x, y, x + this.Width, y + this.Height);
                         if (ShapeView.CornerRadius > 0)
@@ -73,10 +73,10 @@ namespace dnvXamarinForms.Droid
                         }
                     });
                     break;
-                case ShapeType.Circle:
+                case InvisionDo1.ShapeType.Circle:
                     HandleStandardDraw(canvas, p => canvas.DrawCircle(x + this.Width / 2, y + this.Height / 2, (this.Width - 10) / 2, p));
                     break;
-                case ShapeType.CircleIndicator:
+                case InvisionDo1.ShapeType.CircleIndicator:
                     HandleStandardDraw(canvas, p => canvas.DrawCircle(x + this.Width / 2, y + this.Height / 2, (this.Width - 10) / 2, p), drawFill: false);
                     HandleStandardDraw(canvas, p => canvas.DrawArc(new RectF(x, y, x + this.Width, y + this.Height), QuarterTurnCounterClockwise, 360 * (ShapeView.IndicatorPercentage / 100), false, p), ShapeView.StrokeWidth + 3, false);
                     break;

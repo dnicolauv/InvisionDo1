@@ -4,16 +4,16 @@ using Xamarin.Forms.Platform.Android;
 using Android.Graphics;
 
 
-[assembly: ExportRenderer(typeof(dnvXamarinForms.ShapeView), typeof(dnvXamarinForms.Droid.ShapeRenderer))]
+[assembly: ExportRenderer(typeof(InvisionDo1.ShapeView), typeof(dnvXamarinForms.Droid.ShapeRenderer))]
 namespace dnvXamarinForms.Droid
 {
-    public class ShapeRenderer : ViewRenderer<ShapeView, Shape>
+    public class ShapeRenderer : ViewRenderer<InvisionDo1.ShapeView, Shape>
     {
         public ShapeRenderer()
         {
         }
 
-        protected override void OnElementChanged(ElementChangedEventArgs<ShapeView> e)
+        protected override void OnElementChanged(ElementChangedEventArgs<InvisionDo1.ShapeView> e)
         {
             base.OnElementChanged(e);
 
