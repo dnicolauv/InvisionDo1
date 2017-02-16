@@ -1,0 +1,16 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects>$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>5025bf39-029a-45ef-9a42-2d8268915815</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>InivisionDo1.Shared</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)Effects\Effects.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Effects\Effects.Droid.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Effects\Effects.iOS.cs" />
+  </ItemGroup>
+</Project>

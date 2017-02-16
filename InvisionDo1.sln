@@ -8,7 +8,14 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvisionDo1.iOS", "iOS\Invi
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "InvisionDo1.Droid", "Droid\InvisionDo1.Droid.csproj", "{2FC0C517-9601-43BD-B259-7B829FABB015}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "InivisionDo1.Shared", "InivisionDo1.Shared\InivisionDo1.Shared.shproj", "{5025BF39-029A-45EF-9A42-2D8268915815}"
+EndProject
 Global
+	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		InivisionDo1.Shared\InivisionDo1.Shared.projitems*{2fc0c517-9601-43bd-b259-7b829fabb015}*SharedItemsImports = 4
+		InivisionDo1.Shared\InivisionDo1.Shared.projitems*{5025bf39-029a-45ef-9a42-2d8268915815}*SharedItemsImports = 13
+		InivisionDo1.Shared\InivisionDo1.Shared.projitems*{84acb044-9887-42f4-af1d-ccda33912e88}*SharedItemsImports = 4
+	EndGlobalSection
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Ad-Hoc|Any CPU = Ad-Hoc|Any CPU
 		Ad-Hoc|iPhone = Ad-Hoc|iPhone

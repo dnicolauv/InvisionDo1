@@ -1,4 +1,5 @@
-﻿using System;
+﻿#if __ANDROID__
+using System;
 using Android.Graphics;
 using Android.OS;
 using Android.Views;
@@ -12,7 +13,7 @@ using Xamarin.Forms.Platform.Android;
 [assembly: ExportEffect(typeof(CornerRadiusEffect), "CornerRadiusEffect")]
 [assembly: ExportEffect(typeof(ShadowEffect), "ShadowEffect")]
 namespace Effects.Droid
-{ 
+{
     public abstract class BaseEffect : PlatformEffect
     {
         private bool _unloaded;
@@ -79,45 +80,45 @@ namespace Effects.Droid
         }
     }
     public class EntryEffect : PlatformEffect
-	{
-		protected override void OnAttached()
-		{
-			
-		}
+    {
+        protected override void OnAttached()
+        {
 
-		protected override void OnDetached()
-		{
-			
-		}
-	}
-	public class CornerRadiusEffect : PlatformEffect
-	{
-		protected override void OnAttached()
-		{
-			throw new NotImplementedException();
-		}
+        }
 
-		protected override void OnDetached()
-		{
-			throw new NotImplementedException();
-		}
-	}
-	public class ShadowEffect : PlatformEffect
-	{
-		protected override void OnAttached()
-		{
-			throw new NotImplementedException();
-		}
+        protected override void OnDetached()
+        {
 
-		protected override void OnDetached()
-		{
-			throw new NotImplementedException();
-		}
-	}
+        }
+    }
+    public class CornerRadiusEffect : PlatformEffect
+    {
+        protected override void OnAttached()
+        {
+            throw new NotImplementedException();
+        }
 
-	#region CircleEffect
-	public class CircleEffect : BaseEffect
-	{
+        protected override void OnDetached()
+        {
+            throw new NotImplementedException();
+        }
+    }
+    public class ShadowEffect : PlatformEffect
+    {
+        protected override void OnAttached()
+        {
+            throw new NotImplementedException();
+        }
+
+        protected override void OnDetached()
+        {
+            throw new NotImplementedException();
+        }
+    }
+
+#region CircleEffect
+    public class CircleEffect : BaseEffect
+    {
         private ViewOutlineProvider _originalProvider;
 
         public CircleEffect()
@@ -168,7 +169,7 @@ namespace Effects.Droid
             }
         }
     }
-	#endregion
+#endregion
 
 }
-
+#endif

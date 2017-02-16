@@ -4,8 +4,8 @@ using Xamarin.Forms.Platform.Android;
 using Android.Graphics;
 
 
-[assembly: ExportRenderer(typeof(InvisionDo1.ShapeView), typeof(dnvXamarinForms.Droid.ShapeRenderer))]
-namespace dnvXamarinForms.Droid
+[assembly: ExportRenderer(typeof(InvisionDo1.ShapeView), typeof(InvisionDo1.Droid.ShapeRenderer))]
+namespace InvisionDo1.Droid
 {
     public class ShapeRenderer : ViewRenderer<InvisionDo1.ShapeView, Shape>
     {

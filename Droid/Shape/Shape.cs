@@ -5,7 +5,7 @@ using Xamarin.Forms.Platform.Android;
 using Android.Content;
 using Android.Util;
 
-namespace dnvXamarinForms.Droid
+namespace InvisionDo1.Droid
 {
     /// <summary>
     /// This is our class responsible for drawing our shapes
